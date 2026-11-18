@@ -28,4 +28,14 @@ customer_type = input()
 subtotal = float(input())
 payment = float(input())
 
-# TODO: write your code below
+
+discount1 = float(subtotal * .10, 2)
+discount2 = float(subtotal * .20, 2)
+
+if (customer_type.lower = "student"):
+    payable = subtotal - discount1
+    print(f"Discount: ", discount1)
+    print(f"Payable: ", payable)
+    if(payment > payable):
+        print(f"Payment: OK")
+elif ()
