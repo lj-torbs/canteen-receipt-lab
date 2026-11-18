@@ -1,3 +1,5 @@
+import string
+
 # Task 2: Strings (15 points)
 #
 # The first five lines read the input for you. Do not change them.
@@ -24,4 +26,12 @@ item = input()
 qty = input()
 student_id = input()
 
+
+
+
 # TODO: write your code below
+
+initials = "".join([part[0].upper() + "." for part in first_name.split()]) + ".".join([part[0].upper() + "." for part in last_name.split()])
+print(f"Customer: {first_name.title()} {last_name.title()}")
+print(f"Initials: {initials}")
+print(f"Items: {item.title()} x{qty}")

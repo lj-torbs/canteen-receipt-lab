@@ -34,3 +34,20 @@ customer_type = input()
 payment = float(input())
 
 # TODO: write your code below
+full_name = first_name + " " + last_name
+Subtotal = price_text * qty
+
+cleaned_type = customer_type.strip().lower()
+if cleaned_type == "student":
+    pct_discount = 0.10 * subtotal
+elif cleaned_type in ("senior", "pwd"):
+    pct_discount = 0.20 * subtotal
+else:
+    pct_discount = 0.0
+
+print(f"Customer: {full_name.title()}")
+print(f"Item: {item} x{qty}")
+print(f"Subtotal: {Subtotal}")
+print(f"")
+ 
+
