@@ -27,3 +27,4 @@ qty = int(input())
 payment = float(input())
 
 # TODO: write your code below
+price = float(price_text.replace("P", "").replace(",",""))
