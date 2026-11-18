@@ -27,3 +27,22 @@ qty = int(input())
 payment = float(input())
 
 # TODO: write your code below
+
+
+price = float(price_text.replace("P", "").replace(",", ""))
+
+subtotal = round(price * qty, 2)
+vat = round(subtotal * 0.12, 2)
+total = round(subtotal + vat, 2)
+paid = payment
+change = round(paid - total, 2)
+
+centavos = round(change * 100)
+pesos = centavos // 100
+remaining_centavos = centavos % 100
+
+print(f"Subtotal: {subtotal:.2f}")
+print(f"VAT (12%): {vat:.2f}")
+print(f"Total: {total:.2f}")
+print(f"Paid: {paid:.2f}")
+print(f"Change: {pesos} pesos and {remaining_centavos} centavos")
