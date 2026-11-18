@@ -25,12 +25,60 @@
 #
 # RULE: never put text inside input(). The grader types the answers for you.
 
-first_name = input()
-last_name = input()
-item = input()
-price_text = input()
-qty = int(input())
-customer_type = input()
-payment = float(input())
+first_name = first_name.strip().title()
+last_name = last_name.strip().title()
+item = item.strip().title()
 
-# TODO: write your code below
+# Convert price into a number
+price = float(price_text.replace("P", "").replace(",", ""))
+
+# Calculate subtotal
+subtotal = round(price * qty, 2)
+
+# Format customer type
+customer_type = customer_type.strip().lower()
+
+# Calculate discount
+if customer_type == "student":
+    discount = subtotal * 0.10
+elif customer_type == "senior" or customer_type == "pwd":
+    discount = subtotal * 0.20
+else:
+    discount = 0
+
+# Additional discount
+if subtotal >= 500:
+    discount += 25
+
+discount = round(discount, 2)
+
+# Calculate VAT after discount
+vat = round((subtotal - discount) * 0.12, 2)
+
+# Calculate total
+total = round((subtotal - discount) + vat, 2)
+
+# Check payment
+if payment >= total:
+    change = round(payment - total, 2)
+    change_centavos = round(change * 100)
+
+    pesos = change_centavos // 100
+    centavos = change_centavos % 100
+
+    print(f"Customer: {first_name} {last_name}")
+    print(f"Item: {item} x{qty}")
+    print(f"Subtotal: {subtotal:.2f}")
+    print(f"Discount: {discount:.2f}")
+    print(f"VAT (12%): {vat:.2f}")
+    print(f"Total: {total:.2f}")
+    print(f"Paid: {payment:.2f}")
+    print(f"Change: {pesos} pesos and {centavos} centavos")
+else:
+    print(f"Customer: {first_name} {last_name}")
+    print(f"Item: {item} x{qty}")
+    print(f"Subtotal: {subtotal:.2f}")
+    print(f"Discount: {discount:.2f}")
+    print(f"VAT (12%): {vat:.2f}")
+    print(f"Total: {total:.2f}")
+    print("Insufficient payment")

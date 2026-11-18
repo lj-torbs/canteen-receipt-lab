@@ -24,8 +24,32 @@
 #
 # RULE: never put text inside input(). The grader types the answers for you.
 
+
 customer_type = input()
 subtotal = float(input())
 payment = float(input())
 
-# TODO: write your code below
+customer_type = customer_type.strip().lower()
+
+if customer_type == "student":
+    discount = subtotal * 0.10
+elif customer_type == "senior" or customer_type == "pwd":
+    discount = subtotal * 0.20
+else:
+    discount = 0
+
+if subtotal >= 500:
+    discount += 25
+
+discount = round(discount, 2)
+payable = round(subtotal - discount, 2)
+
+if payment >= payable:
+    status = "Payment OK"
+else:
+    status = "Insufficient payment"
+
+print(f"Discount: {discount:.2f}")
+print(f"Payable: {payable:.2f}")
+print(status)
+
