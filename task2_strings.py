@@ -24,4 +24,10 @@ item = input()
 qty = input()
 student_id = input()
 
+
+
 # TODO: write your code below
+print("customer: ", first_name, " ", last_name )
+print("Initials: ", first_name[0], last_name[0] )
+print("Items", title.item() * qty)
+print("id: ", student_id)

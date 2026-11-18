@@ -29,3 +29,6 @@ subtotal = float(input())
 payment = float(input())
 
 # TODO: write your code below
+customer = customer_type.strip().lower()
+if customer_type == "student":
+    discount_rate == 0.10
