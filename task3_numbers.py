@@ -25,5 +25,13 @@
 price_text = input()
 qty = int(input())
 payment = float(input())
-
+subtotal=(price_text* qty)
+vats= (subtotal * 0.12)
+vat = round(vats,2)
+tots = (subtotal + vat)
+total = round(tots,2)
 # TODO: write your code below
+print('Subtotal: '+subtotal)
+print('Vat: 'vat)
+print('Total: '+total)
+print('Change: '+)
