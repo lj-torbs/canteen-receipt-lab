@@ -18,10 +18,16 @@
 #
 # RULE: never put text inside input(). The grader types the answers for you.
 
-first_name = input()
-last_name = input()
+first_name = input().strip()
+last_name = input().strip()
 item = input()
 qty = input()
 student_id = input()
 
-# TODO: write your code below
+full_name = f"{first_name.title().strip()} {last_name.title().strip()}"
+initials = f"{first_name[0].upper()}.{last_name[0].upper()}."
+masked_id = "*" * (len(student_id) - 3) + student_id[-3:]
+print(f"Customer: {full_name}")
+print(f"Initials: {initials}")
+print(f"Item: {item.title().strip()} x{qty}")
+print(f"ID: {masked_id}")
