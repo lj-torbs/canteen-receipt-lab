@@ -29,3 +29,40 @@ subtotal = float(input())
 payment = float(input())
 
 # TODO: write your code below
+customer = customer_type.strip().lower()
+discount = 0
+if customer == "student":
+    discount = round(subtotal * 0.10, 2)
+    if subtotal >= 500:
+        discount + 25
+    payable = round(subtotal - discount, 2)
+    print(f"Discount: {discount:.2f}")
+    print(f"Payable: {payable:.2f}")
+    change = round(payment - payable)
+    if change >= 0:
+        print("Payment OK")
+    else:
+        print("Insufficient payment")
+elif customer == "senior":
+    discount = round(subtotal * 0.20, 2)
+    if subtotal >= 500:
+        discount + 25
+    payable = round(subtotal - discount, 2)
+    print(f"Discount: {discount:.2f}")
+    print(f"Payable: {payable:.2f}")
+    change = round(payment - payable)
+    if change >= 0:
+        print("Payment OK")
+    else:
+        print("Insufficient payment")
+else:
+    if subtotal >= 500:
+        discount + 25
+    payable = round(subtotal - discount, 2)
+    print(f"Discount: {discount:.2f}")
+    print(f"Payable: {payable:.2f}")
+    change = round(payment - payable)
+    if change >= 0:
+        print("Payment OK")
+    else:
+        print("Insufficient payment")
