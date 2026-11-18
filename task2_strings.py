@@ -24,4 +24,9 @@ item = input()
 qty = input()
 student_id = input()
 
-# TODO: write your code below
+print("Costumer: ", first_name )
+print("Costumer: ", last_name )
+print("Item:  ", item)
+print("Quantity: ", qty)
+print("ID: ", student_id)
+ 
