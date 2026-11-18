@@ -34,3 +34,5 @@ customer_type = input()
 payment = float(input())
 
 # TODO: write your code below
+
+print()
