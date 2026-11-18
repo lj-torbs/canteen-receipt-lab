@@ -25,3 +25,9 @@ qty = input()
 student_id = input()
 
 # TODO: write your code below
+
+
+print(f"Customer: {first_name.strip().title()} {last_name.strip().title()}")
+print(f"Initials: {first_name.strip()[0].upper()}.{last_name.strip()[0].upper()}.")
+print(f"Item: {item.strip().title()} x{qty.strip()}")
+print(f"ID: {'*' * (len(student_id.strip()) - 3)}{student_id.strip()[-3:]}")

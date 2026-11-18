@@ -34,3 +34,41 @@ customer_type = input()
 payment = float(input())
 
 # TODO: write your code below
+
+price = float(price_text.replace('P', '').replace('p', '').replace(',', ''))
+
+subtotal = round(price * qty, 2)
+
+if customer_type == "student":
+    discount = round(subtotal * 0.10)
+elif customer_type == "senior" or customer_type == "pwd":
+    discount = round(subtotal * 0.20)
+else:
+    discount = 0.0
+
+    if subtotal >= 500:
+        discount += 25.0
+
+discount = round(discount, 2)
+after_discount = round(subtotal - discount, 2)
+vat = round(after_discount * 0.12, 2)
+total = round(after_discount + vat, 2)
+
+print(f"Customer: {first_name} {last_name}")
+print(f"Item: {item} x{qty}")
+print(f"Subtotal: {subtotal:.2f}")
+print(f"Discount: {discount:.2f}")
+print(f"VAT (12%): {vat:.2f}")
+print(f"Total: {total:.2f}")
+
+if payment >= total:
+    change = round(payment - total, 2)
+    change_centavos = round(change * 100)
+    change_pesos = change_centavos // 100
+    centavos = change_centavos % 100
+    print(f"Paid: {payment:.2f}")
+    print(f"Change: {change_pesos} pesos and {change_centavos} centavos")
+
+else:
+    print("Insufficient payment")
+
