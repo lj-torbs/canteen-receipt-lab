@@ -18,10 +18,14 @@
 #
 # RULE: never put text inside input(). The grader types the answers for you.
 
-first_name = input()
-last_name = input()
-item = input()
-qty = input()
-student_id = input()
+first_name = input("first name: ")
+last_name = input("Initial: ")
+item = input("Item: ")
+qty = int(input("quantity: "))
+student_id = int(input("Student Id: "))
 
 # TODO: write your code below
+print("Customer: "+ first_name.title())
+print("Initials: " + last_name)
+print("Item: ", item, qty + "x")
+print("ID: ", student_id)

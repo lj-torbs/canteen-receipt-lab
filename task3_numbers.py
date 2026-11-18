@@ -22,8 +22,16 @@
 #
 # RULE: never put text inside input(). The grader types the answers for you.
 
-price_text = input()
-qty = int(input())
+price_text = int(input())
+qty = float(input())
 payment = float(input())
+Subtotal = price_text * qty
+VAT = 0.12 // Subtotal
+total = Subtotal + VAT
+Change = payment - total
 
 # TODO: write your code below
+print("Subtotal: Subtotal ", round(Subtotal)f:.2)
+print("Vat (12%): ", round(VAT, 2))
+print("Paid: ", round(total, 2))
+print("Change: ", round(Change, 2))
