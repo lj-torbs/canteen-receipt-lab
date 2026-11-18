@@ -24,4 +24,11 @@ item = input()
 qty = input()
 student_id = input()
 
-# TODO: write your code below
+def customer(first_name, last_name):
+    return text.strip().title()
+
+
+print("Customer: ",first_name, last_name)
+print(f"Initials: {first_name[0].title().strip()}.{last_name[0].title().strip()}." )
+print(f"Item: ", item, qty)
+print("ID: ",("*" * 6),student_id[-3:])
