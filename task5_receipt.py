@@ -33,4 +33,31 @@ qty = int(input())
 customer_type = input()
 payment = float(input())
 
-# TODO: write your code below
+price_text_convert = float(price_text[1:].replace(',', ''))
+subtotal = price_text_convert * qty
+vat = subtotal * 0.12
+total = subtotal + vat
+change = payment - total
+
+STUDENT_DISCOUNT = 0.10
+SENIOR_PWD_DISCOUNT = 0.20
+OTHER_DISCOUNT = 0.00
+
+if customer_type.strip() == "SENIOR" or customer_type.strip() == "PWD":
+    discount = subtotal * SENIOR_PWD_DISCOUNT
+elif customer_type.strip() == "STUDENT":
+    discount = subtotal * STUDENT_DISCOUNT
+else:
+    discount = subtotal * OTHER_DISCOUNT
+
+if subtotal >= 500:
+    discount += 25
+
+print("Customer: " + first_name.title() + " " + last_name.title())
+print(f"Item: {item.title()} x{qty}")
+print(f"Subtotal: {subtotal:.2f}")
+print(f"Discount: {discount:.2f}")
+print(f"VAT (12%): {vat:.2f}")
+print(f"Total: {total:.2f}")
+print(f"Paid: {payment:.2f}")
+print(f"Change: {int(change)} pesos and {int((change * 100) // change % 100)} centavos")

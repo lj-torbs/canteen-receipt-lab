@@ -28,4 +28,26 @@ customer_type = input()
 subtotal = float(input())
 payment = float(input())
 
-# TODO: write your code below
+
+STUDENT_DISCOUNT = 0.10
+SENIOR_PWD_DISCOUNT = 0.20
+OTHER_DISCOUNT = 0.00
+
+if customer_type.strip() == "SENIOR" or customer_type.strip() == "PWD":
+    discount = subtotal * SENIOR_PWD_DISCOUNT
+elif customer_type.strip() == "STUDENT":
+    discount = subtotal * STUDENT_DISCOUNT
+else:
+    discount = subtotal * OTHER_DISCOUNT
+
+if subtotal >= 500:
+    discount += 25
+
+payable = subtotal - discount
+
+print(f"Discount: {discount:.2f}")
+print(f"Payable: {payable:.2f}")
+if payment >= payable:
+    print("Payment OK")
+else:
+    print("Insufficient payment")
