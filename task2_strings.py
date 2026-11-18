@@ -24,4 +24,9 @@ item = input()
 qty = input()
 student_id = input()
 
-# TODO: write your code below
+
+asterisk = "*"
+print("Customer:",first_name.title().strip(),last_name.title().strip())
+print(f"Initials: {first_name[0].title().strip()}.{last_name[0].title().strip()}.")
+print(f"Item: {item.title()} {qty}")
+print(f"ID: ******{student_id.strip()[6:]}")
