@@ -27,3 +27,4 @@ qty = int(input())
 payment = float(input())
 
 # TODO: write your code below
+print(round(price_text * qty,2))
