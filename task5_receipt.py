@@ -32,5 +32,9 @@ price_text = input()
 qty = int(input())
 customer_type = input()
 payment = float(input())
+full_name=first_name.title()+' '+last_name.title()
 
 # TODO: write your code below
+print('Customer: '+full_name)
+print('Item:'+item+' x'+qty)
+print()
