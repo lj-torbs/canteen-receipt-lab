@@ -24,8 +24,18 @@
 #
 # RULE: never put text inside input(). The grader types the answers for you.
 
-customer_type = input()
+customer_type = input("Customer Type: ")
 subtotal = float(input())
 payment = float(input())
 
 # TODO: write your code below
+
+customer = customer_type.strip().lower()
+if customer_type == "student":
+    discount_rate == 0.10
+elif customer_type == "senior":
+    discount_rate == 0.20
+else:
+    discount_rate == 0.0
+    
+    discount = discount_price
