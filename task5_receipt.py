@@ -34,3 +34,12 @@ customer_type = input()
 payment = float(input())
 
 # TODO: write your code below
+subtotal = price_text * qty
+print("Customer:",first_name,last_name)
+print("Item:",item, "x", qty)
+print("Subtotal:",subtotal)
+print("Discount:",)
+print("VAT:")
+print("Total:")
+print("Paid:",payment)
+print("Change:")

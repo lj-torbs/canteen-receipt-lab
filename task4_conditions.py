@@ -29,3 +29,13 @@ subtotal = float(input())
 payment = float(input())
 
 # TODO: write your code below
+
+
+if customer_type == student:
+    discount = 10
+elif customer_type == senior:
+    discount = 20
+else:discount = 0
+
+  #  print("Discount",discount)
+   # print("Payable")
