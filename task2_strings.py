@@ -23,5 +23,10 @@ last_name = input()
 item = input()
 qty = input()
 student_id = input()
-
+full_name= first_name.title()+' '+last_name.title()
 # TODO: write your code below
+
+print('Customer: '+full_name)
+print('Inititals: '+first_name[0].upper()+'.'+last_name[0].upper())
+print('Item: '+item.title() +' x'+qty)
+print('ID: '+str(len(student_id[-3:])* "*"+student_id[-3]+student_id[-2]+student_id[-1]))
