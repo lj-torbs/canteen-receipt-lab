@@ -10,11 +10,13 @@
 #
 # Your commit message must say what the bug was (example: "Fix tier bug: ...").
 
-points = int(input())
+points = int(input(100))
 
-if points >= 100:
+if points == 0 & points < 100:
+    print("Bronze")
+elif points >= 100 & points < 500:
     print("Silver")
 elif points >= 500:
     print("Gold")
 else:
-    print("Bronze")
+    print("Invalid")
