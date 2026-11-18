@@ -21,7 +21,12 @@
 first_name = input()
 last_name = input()
 item = input()
-qty = input()
-student_id = input()
+qty = int(input())
+student_id = int(input())
 
-# TODO: write your code below
+
+
+print(f"Customer: ", first_name.title(), last_name.title())
+print(f"Initials: ", str.upper(f"{first_name[0]}. {last_name[0]}."))
+print(f"Item: {item} x{qty}")
+print(f"ID: {student_id}", "*"*5)
