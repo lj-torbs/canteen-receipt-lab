@@ -28,4 +28,18 @@ customer_type = input()
 subtotal = float(input())
 payment = float(input())
 
+
 # TODO: write your code below
+if customer_type == student:
+    discount =0.10
+    elif customer_type == senior or pwd :
+        discount =0.20
+        else:
+            dicount = 0
+payables= (subtotal * discount)
+payable =(subtotal - payables)
+pay= round(payable,2)
+
+print('Discount: '+discount)
+print('Payable" '+payables)
+print('Payment: 'pay)
