@@ -17,11 +17,25 @@
 #        len(), "*" * 5, and f-strings.
 #
 # RULE: never put text inside input(). The grader types the answers for you.
-
 first_name = input()
 last_name = input()
 item = input()
 qty = input()
 student_id = input()
 
-# TODO: write your code below
+
+clean_first = first_name.strip().title()
+clean_last = last_name.strip().title()
+clean_item = item.strip().title()
+clean_qty = qty.strip()
+clean_id  = student_id.strip()
+
+masked_id = "*" * (len(clean_id) - 3) + clean_id[-3:]
+
+
+print(f"Customer: {clean_first} {clean_last}")
+print(f"Initials: {clean_first[0]}.{clean_last[0]}.")
+print(f"Initials: {clean_first[0]} {clean_last[0]}")
+print(f"Item: {clean_item} {clean_qty}")
+print(f"ID: {masked_id}")
+print(f"ID: {clean_id}")

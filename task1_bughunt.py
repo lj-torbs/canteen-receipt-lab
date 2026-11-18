@@ -12,9 +12,13 @@
 
 points = int(input())
 
-if points >= 100:
-    print("Silver")
-elif points >= 500:
+if points >= 500:
     print("Gold")
-else:
+elif points >= 100:
+    print("Silver")
+elif points >= 0:
     print("Bronze")
+else:
+    print("Invalid points")
+
+
