@@ -29,3 +29,27 @@ subtotal = float(input())
 payment = float(input())
 
 # TODO: write your code below
+cleaned_type = customer_type.strip().lower()
+
+if cleaned_type == "student":
+    discount_rate == 0.10
+elif cleaned_type == "senior" or type == "pwd":
+    discount_rate == 0.20
+else:
+    discount = 0.0
+
+discount = subtotal * discount_rate
+
+if subtotal >= 500:
+    discount += 25.0
+discount = round(discount, 2)
+payable = round(subtotal - discount, 2)
+
+print(f"Discout: {discount:.2f}" )
+print(f"Payable: {payable:.2f}")
+
+if payment >= payable:
+    print("Paid")
+else:
+    print("Insufficient Balance") 
+
