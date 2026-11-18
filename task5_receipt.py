@@ -33,4 +33,4 @@ qty = int(input())
 customer_type = input()
 payment = float(input())
 
-# TODO: write your code below
+print("Bawi r5ako sunod sir <3")
