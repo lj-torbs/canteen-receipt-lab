@@ -21,7 +21,24 @@
 first_name = input()
 last_name = input()
 item = input()
-qty = input()
-student_id = input()
+qty = int()
+student_id = int()
 
-# TODO: write your code below
+clean_first = first_name.strip().title()
+clean_last = last_name.strip().title()
+clean_item = item.strip().title()
+clean_qty =  qty.strip().title()
+clean_id = student_id.strip().title()
+
+masked_id = "*" * (len(clean_id) - 3  + clean_id[-3:])
+
+print(f"Customer: {clean_first} {clean_last}")
+print(f"Intials: {clean_first[0]}.{clean_last[0]}.")
+print(f"Item: {clean_item} {clean_qty}")
+print(f"ID: {masked_id}")
+print(f"ID {clean_id}")
+
+
+
+
+ 
