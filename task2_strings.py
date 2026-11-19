@@ -16,12 +16,16 @@
 # Hints: strip(), title(), upper(), indexing like name[0], slicing like text[-3:],
 #        len(), "*" * 5, and f-strings.
 #
-# RULE: never put text inside input(). The grader types the answers for you.
+# RULE: never put text inside input(). The grader t ypes the answers for you.
 
-first_name = input()
-last_name = input()
-item = input()
-qty = input()
-student_id = input()
+first_name = input().strip()
+last_name = input().strip()
+item = input().strip()
+qty = input().strip()
+student_id = input().strip()
 
-# TODO: write your code below
+print(f"Customer: {first_name} {last_name}")
+print(f"Initials: {first_name[0].upper()}{last_name[0].upper()}")
+print(f"Item:  {item} {qty}")
+print(f"Id: { "*" * 5}{student_id[-3:]}")
+
