@@ -7,7 +7,7 @@
 # Extra rule: if the subtotal is 500 or more, take an additional 25 pesos off.
 # Both rules can apply together (for example a student with a 600 peso order).
 #
-# The customer type may be typed in any capitalisation and with extra spaces,
+# The customer type may be typed in any capitalization and with extra spaces,
 # so " SENIOR " counts as senior.
 #
 # The first three lines read the input for you. Do not change them.
@@ -28,4 +28,21 @@ customer_type = input()
 subtotal = float(input())
 payment = float(input())
 
-# TODO: write your code below
+clean_type = customer_type.strip().lower()
+if clean_type == "student":
+    discount = subtotal * 0.10
+elif clean_type == "senior" or clean_type == "pwd":
+    discount = subtotal * 0.20
+else:
+    discount = 0.0
+    
+discount = round(discount, 2)
+payable = round(subtotal - discount, 2)
+
+print(f"discount: {discount:.2f}")
+print(f"Payable: {payable:.2f}")
+
+if payment >= payable:
+    print("Payment OK")
+else:
+    print("Insufficient Payment")
