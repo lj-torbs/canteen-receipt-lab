@@ -27,3 +27,17 @@ qty = int(input())
 payment = float(input())
 
 # TODO: write your code below
+
+price_text.index[0:]
+price = int(price_text)
+sub_total = price * qty
+Vat = sub_total % 12
+total_final = sub_total + Vat
+Change = payment - total_final
+cent_avos = int((Change * 100) // 2 % 12)
+
+print("Subtotal: " , sub_total, 2)
+print("VAT (12%): ", Vat, 2)
+print("Total: ", total_final, 2)
+print("Paid: ", payment, 2)
+print("Change: ", Change , " Pesos and " , cent_avos , " centavos")
