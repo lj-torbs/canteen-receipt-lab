@@ -24,9 +24,7 @@ item = input()
 qty = input()
 student_id = input()
 
-print("Costumer: ", first_name )
-print("Costumer: ", last_name )
-print("Item:  ", item)
-print("Quantity: ", qty)
-print("ID: ", student_id)
- 
+print("Costumer:", first_name.title(), last_name.title())
+print(f"Initials: {first_name.strip()[0].upper()}.{last_name.strip()[0].upper()}.")
+print("Item:", item.title(), f"x{qty}")
+print(f"ID: {"*" * (len(student_id) - 3)}{student_id.strip()[-3:]}")
