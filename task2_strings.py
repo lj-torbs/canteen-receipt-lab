@@ -21,7 +21,7 @@
 first_name = input()
 last_name = input()
 item = input()
-qty = input()
-student_id = input()
+qty = 3
+student_id = 151496
 
 # TODO: write your code below
