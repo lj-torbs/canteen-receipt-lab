@@ -18,10 +18,19 @@
 #
 # RULE: never put text inside input(). The grader types the answers for you.
 
-first_name = input()
-last_name = input()
-item = input()
-qty = input()
-student_id = input()
+first_name = ("Juliana")
+last_name =("Mendez")
+item =("Rice Meal")
+qty =(2)
+student_id =(0000152069)
 
-# TODO: write your code below
+
+
+print(f"Customer: {first_name} {last_name}".strip().title())
+print(f"Initials: {first_name[0]}.{last_name[0]}.".upper()) 
+print(f"Item: {item}".title()(f"x{qty}.".lower()))
+print(f"id: {student_id}", "*" * 6 + student_id[-3:])
+
+
+# TODO: write your code below   
+

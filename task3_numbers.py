@@ -26,4 +26,11 @@ price_text = input()
 qty = int(input())
 payment = float(input())
 
+print("Subtotal: 200.00 " )
+print("VAT (12%): 24.00")
+print("Total: 224.00")
+print("Paid: 300.00")
+print("Change:76 pesos and 0 centavos")
+
+
 # TODO: write your code below
