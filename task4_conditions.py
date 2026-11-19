@@ -29,3 +29,5 @@ subtotal = float(input())
 payment = float(input())
 
 # TODO: write your code below
+print("Costumer", customer_type)
+if student 
