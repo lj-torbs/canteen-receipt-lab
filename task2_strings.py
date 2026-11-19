@@ -18,10 +18,15 @@
 #
 # RULE: never put text inside input(). The grader types the answers for you.
 
-first_name = input()
-last_name = input()
-item = input()
-qty = input()
-student_id = input()
+first_name = input() #first_name = 'juan'
+last_name = input() #last_name = 'Cruz'
+item = input()  #item = 'rice meal'
+qty = input() #qty = '2'
+student_id = input() #student_id =  '2024-1234' 
 
 # TODO: write your code below
+
+print("Customer: "+first_name.strip().title() + last_name.strip().title())
+print("Initials: "+fist_name[0].title().strip()), (last_name[-3:].title())
+print("Item: ", item.title(),"x"qty)
+print("ID :" "*" * 5, student_id)
