@@ -22,6 +22,18 @@ first_name = input()
 last_name = input()
 item = input()
 qty = input()
+
 student_id = input()
 
 # TODO: write your code below
+
+fullname = first_name + " " + last_name
+initals = first_name[0] + "." + last_name[0] + "."
+item = item.strip()
+qty = qty.strip()
+student_id = student_id.strip()
+masked_id = "*" * (len(student_id) - 3) + student_id[-3:]
+print("Customer: ", fullname.title())
+print("Initials: ", initals.title())
+print("Item:", item.title() + " x" + qty)
+print("ID:", masked_id)
