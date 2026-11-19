@@ -25,3 +25,18 @@ qty = input()
 student_id = input()
 
 # TODO: write your code below
+
+f_name = first_name.strip().title()
+l_name = last_name.strip().title()
+item_name = item.strip().title()
+quantity = qty.strip().title()
+stud_id = student_id.strip().title()
+
+initials = f"{f_name[0].upper}.{l_name[0].upper}."
+item_id = "*" * (len(stud_id) - 3) + stud_id[-3:]
+
+print(f"Customer: {f_name} {l_name}")
+print(f"Initials: {initials}")
+print(f"Item: {item_name} x {quantity}")
+print(f"ID: {stud_id}")
+
