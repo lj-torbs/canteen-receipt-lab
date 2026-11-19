@@ -34,3 +34,35 @@ customer_type = input()
 payment = float(input())
 
 # TODO: write your code below
+
+price_text.index[0:]
+price = int(price_text)
+sub_total = price * qty
+Vat = sub_total % 12
+total_final = sub_total + Vat
+Change = payment - total_final
+cent_avos = int((Change * 100) // 2 % 12)
+
+if customer_type == "student":
+    discount = payment % 10 
+    payable = sub_total - discount 
+elif customer_type == "senior":
+    discount = payment % 20 
+    payable = sub_total - discount 
+if customer_type == "other customer":
+    discount = 0 
+    payable = sub_total - discount
+elif payment > sub_total:
+    pay = "OK"
+else:
+    pay = "Insufficient payment" 
+
+ 
+print("Customer: " + first_name.strip().title() + " " + last_name.strip().title())
+print("Item: " + item.title().strip() + " x", qty)  
+print("Subtotal: " , sub_total, 2)
+print("Discount: ", discount)
+print("VAT (12%): ", Vat, 2)
+print("Total: ", total_final, 2)
+print("Paid: ", payment, 2)
+print("Change: ", Change , " Pesos and " , cent_avos , " centavos")
