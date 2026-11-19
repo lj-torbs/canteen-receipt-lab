@@ -29,3 +29,8 @@ subtotal = float(input())
 payment = float(input())
 
 # TODO: write your code below
+
+if customer_type == "Senior, senior, SENIOR, pwd, PWD, Pwd":
+ print("Discount: 20%")
+ print("Payable: ",subtotal * 0.2)
+ print("Payment OK")
