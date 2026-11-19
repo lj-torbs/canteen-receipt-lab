@@ -29,3 +29,17 @@ subtotal = float(input())
 payment = float(input())
 
 # TODO: write your code below
+student = 1
+senior_pwd = 2
+normal_customer = 3
+
+if customer_type == student:
+    discount = payment * 0.10
+    if subtotal >= 500:
+        discount - 25
+
+    
+
+print("Discount: ")
+print("Payable: ")
+print("Payment ")
