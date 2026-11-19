@@ -21,9 +21,15 @@
 # You may assume the payment is always enough.
 #
 # RULE: never put text inside input(). The grader types the answers for you.
+import math
+
 
 price_text = input()
 qty = int(input())
 payment = float(input())
 
-# TODO: write your code below
+print(f"Subtotal: {float(price_text.replace('P', '').replace(',', '')) * qty:.2f}") 
+print(f"VAT (12%): {float(price_text.replace('P', '').replace(',', '')) * qty * 0.12:.2f}")
+print(f"Total: {float(price_text.replace('P', '').replace(',', '')) * qty * 1.12:.2f}")
+print(f"Paid: {payment:.2f}")
+print(f"Change: {payment - float(price_text.replace('P', '')*qty * 1.12):.0f} pesos and {(payment - float(price_text.replace('P', '')*qty * 1.12) - math.floor(payment - float(price_text.replace('P', '')*qty * 1.12))) * 100:.0f} centavos")
