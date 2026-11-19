@@ -34,3 +34,11 @@ customer_type = input()
 payment = float(input())
 
 # TODO: write your code below
+if qty > 1:
+    qty = "ok"
+else :
+    qty = qty
+
+print ("Customer :", first_name, last_name)
+print("Item ", item, (qty + qty))
+print("Subtotal: ", )        
