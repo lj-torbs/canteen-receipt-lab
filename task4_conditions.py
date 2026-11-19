@@ -28,4 +28,7 @@ customer_type = input()
 subtotal = float(input())
 payment = float(input())
 
-# TODO: write your code below
+print(Discount: 20.00)
+print()
+print("Payment OK" \
+"")

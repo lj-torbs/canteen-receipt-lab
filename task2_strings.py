@@ -24,4 +24,7 @@ item = input()
 qty = input()
 student_id = input()
 
-# TODO: write your code below
+print (f"Customer:", first_name.title(), last_name.title())
+print (f"Initials :", first_name[1].upper{} + last_name)
+print (f"Item: ", item + "2"+ qty)
+print (f"ID: ", student_id)
