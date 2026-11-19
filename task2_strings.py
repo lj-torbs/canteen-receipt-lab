@@ -25,3 +25,22 @@ qty = input()
 student_id = input()
 
 # TODO: write your code below
+first_name = "Joey Mark"
+Last_Name = "Pelongco"
+Item = "Shampoo"
+qty = 4
+Student_Id = "150764"
+
+first_clean = first_name.upper().title()
+last_clean = last_name.upper().title()
+item_clean = item.upper().title()
+qty_clean = qty.upper().title()
+Customer = first_name + " " + last_name
+Initials = first_name[0] + last_name [-3:]
+first_name.len()
+Item = item + " " + qty 
+
+print(f"Customer : {Customer.title()}")
+print(f"Initials : {Initials.title()}")
+print(f"Item {Item.title()}")
+print(f"Student_ID : {Student_Id}")
