@@ -34,3 +34,26 @@ customer_type = input()
 payment = float(input())
 
 # TODO: write your code below
+price_text = str(int)
+subtotal = price_text * qty
+discount = subtotal % 10
+vat = 12 % discount
+total = (subtotal - discount) + vat
+change = payment - total
+value = (change * 100) // change
+
+print(f"Customer: {first_name} {last_name}")
+print(f"Item: {item.title()} {qty}")
+print(f"Subtotal: {subtotal:2f}")
+print(f"Discount: {discount:2f}")
+print(f"VAT (12%): {vat:2f}")
+print(f"Total: {total:2f}")
+print(f"Paid: {payment:2f}")
+print(f"Change: {change} pessos and {value} centavos")
+
+if payment >= subtotal:
+    print(f"Paid: {payment:2f}")
+    print(f"Change: {change} pessos and {value} centavos")
+else:
+    print("Insufficient payment")
+ 

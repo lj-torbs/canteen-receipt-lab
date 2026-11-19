@@ -25,3 +25,9 @@ qty = input()
 student_id = input()
 
 # TODO: write your code below
+
+
+print(f"Customer: {first_name} {last_name}")
+print(f"Initials: {first_name[0].upper()}.{last_name[0].upper()}.")
+print(f"Item: {item.title()} {qty.strip()}")
+print(f"ID: {"*" * 5}{student_id[-3:]}")
