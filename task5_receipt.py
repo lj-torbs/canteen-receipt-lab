@@ -34,3 +34,10 @@ customer_type = input()
 payment = float(input())
 
 # TODO: write your code below
+print("Customer:")
+print("Item:")
+print("Discount:")
+print("VAT (12%):")
+print("Total:")
+print("Paid:")
+print("Change:")
